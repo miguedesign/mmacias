@@ -1,1 +1,4 @@
+npm install stylus -g
+npm install nib -g
+
 stylus -u nib -c -w assets/stylus/style.styl -o assets/css/style.css
