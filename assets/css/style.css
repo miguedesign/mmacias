@@ -804,7 +804,10 @@ p {
 _____________________________________________________ */
 .header {
   font-family: 'Archivo Black', sans-serif;
+  font-weight: 100;
   padding-top: 50px;
+  position: relative;
+  z-index: 1000;
 }
 .header .container {
   display: flex;
@@ -930,4 +933,59 @@ _____________________________________________________ */
 .footer-design a:hover {
   color: #0f46c1;
   background-color: rgba(15,70,193,0.05);
+}
+/* Hero
+_____________________________________________________ */
+.hero {
+  background-image: url("../imgs/bg-hero-mmacias.svg");
+  background-size: 722px;
+  background-position: 281px 0;
+  background-repeat: no-repeat;
+  min-height: 530px;
+  position: relative;
+}
+.hero .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.hero-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0;
+  font-weight: 100;
+  margin-left: 8.86249%;
+  position: absolute;
+  bottom: 0;
+}
+.hero-name-title {
+  font-size: 24px;
+  display: block;
+  line-height: 30px;
+}
+.hero-img {
+  position: absolute;
+  width: 362px;
+  background-color: #ffda55;
+  height: 361px;
+  top: 91px;
+  left: 551px;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 104%;
+  margin-left: -2%;
+}
+.hero-description {
+  width: 65.69162%;
+  margin-left: 25.54581%;
+  background-color: #f6f8fa;
+  padding: 60px;
+  margin-bottom: 100px;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: -0.2px;
 }
