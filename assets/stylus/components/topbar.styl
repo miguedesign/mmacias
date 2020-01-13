@@ -16,6 +16,7 @@
 		li
 			display inline-block
 			margin 0 10px 0 0
+			vertical-align middle
 			p, a
 				font-size 14px
 				margin 0
@@ -74,3 +75,49 @@
 				margin 0
 				a
 					padding 0 20px
+
+#upWork
+	background-color purple-color
+	color white-color
+	font-family font-light
+	font-size 16px
+	padding 0 15px
+	border-radius 20px
+	font-weight 600
+	position relative
+	overflow hidden
+	span
+		z-index 100
+		position relative
+	&::before,
+	&::after
+		position absolute
+		content ''
+		display block
+		transition all .5s cubic-bezier(0.22, 0.61, 0.36, 1)
+	&::before
+		width 40px
+		height 40px
+		top -40px
+		left -40px
+		background-color pink-color
+		z-index 1
+		border-radius 100px
+	&::after
+		width 40px
+		height 40px
+		top 100%
+		right -40px
+		background-color primary-color
+		z-index 1
+		border-radius 100px
+	
+	&:hover
+		background-color purple-color
+		color white-color
+		&::before
+			top -10px
+			left -10px
+		&::after
+			top 10px
+			right -10px
