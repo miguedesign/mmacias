@@ -13,8 +13,8 @@ jQuery(document).ready(function($) {
 	previousScroll = 0;
 	header = $('.header');
 	$main = $('.main');
-	originalTop = header.offset().top;
-	$(window).scroll(
+    originalTop = header.offset().top;
+    $(window).scroll(
 		function(e){
 		if ($(this).scrollTop() >= originalTop + 40)
 			{
@@ -27,7 +27,24 @@ jQuery(document).ready(function($) {
 				$main.removeClass('is-scrolled');
 
 		}
-	});
+    });
+
+
+    // Menu mobile
+    button = $('.toggleMenu');
+    menu = $('.menu');
+    button.on('click', function(e){
+			e.preventDefault();
+			openMenu();
+			buttonClicked();
+		});
+		function buttonClicked(){
+			button.toggleClass('is-clicked');
+		};
+		function openMenu(){
+			menu.toggleClass('is-open');
+		};
+
 
 
 	// Navigation left

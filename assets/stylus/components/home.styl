@@ -42,5 +42,57 @@
     letter-spacing -0.1px
   
 .main
+  margin-top 80px
+  display inline-block
   &.is-scrolled
-    padding-top 100px
+    padding-top 10px
+    
+@media screen and (min-width screen_large)
+  .hero
+    background-image url('../imgs/bg-hero-mmacias.svg')
+    background-size 722px
+    background-position 281px 0
+    background-repeat no-repeat
+    min-height 530px
+    position relative
+    .container 
+      row()
+    &-name
+      font-family font-bold
+      font-size 60px
+      line-height 60px
+      margin 0
+      font-weight 100
+      offset(1)
+      position absolute
+      bottom 0
+      &-title
+        font-size 24px
+        display block
+        line-height 30px
+    &-img
+      position absolute
+      width 362px
+      background-color primary-color
+      height: 361px
+      top 91px
+      left 551px
+      overflow hidden
+      img
+        width 104%
+        margin-left -2%
+    &-description
+      col(8)
+      offset(3)
+      background-color light-color
+      padding 60px
+      margin-bottom 100px
+      font-size 18px
+      line-height 40px
+      letter-spacing -0.1px
+    
+  .main
+    margin 0
+    display block
+    &.is-scrolled
+      padding-top 100px

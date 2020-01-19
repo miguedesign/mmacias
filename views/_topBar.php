@@ -2,14 +2,15 @@
   <div class="container">
     <nav class="nav nav-left">
       <ul class="nav-list">
-        <li><a href="" class="nav-item">BUAP</a></li>
-        <li><a href="" class="nav-item">FCFM</a></li>
+        <li><a href="" class="nav-item buap">BUAP</a></li>
+        <li><a href="" class="nav-item fcfm">FCFM</a></li>
         <li><p id="date">12 de Diciembre del 2019</p></li>
       </ul>
     </nav>
-    <nav class="nav nav-right">
+    <a href="#" class="toggleMenu"><span>button menu</span></a>
+    <nav class="nav nav-right menu">
       <ul class="nav-list">
-        <li><a href="./" class="nav-item">Inicio</a></li>
+        <li class="<?= $home ?>"><a href="./" class="nav-item">Inicio</a></li>
         <li><a href="" class="nav-item">Investigación</a></li>
         <li class="dropdown">
             <a href="" class="nav-item">Materias</a>
@@ -21,7 +22,7 @@
               <li><a href="detail-course.html" class="nav-item">Etc</a></li>
             </ul>
         </li>
-        <li>
+        <li class="<?= $home ?>">
           <a href="./tareas.html" class="nav-item" id="upWork"><span>Subir tarea</span></a>
         </li>
       </ul>

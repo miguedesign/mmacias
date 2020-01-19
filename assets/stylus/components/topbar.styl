@@ -2,21 +2,21 @@
 	font-family font-bold
 	font-weight 100
 	padding 50px 0 10px
-	position relative
 	z-index 1000
+	background-color white-color
+	position fixed
+	top 0
+	left 0
+	width 100%
+	transition all .2s cubic-bezier(0.22, 0.61, 0.36, 1)
 	.container
 		row()
 		justify(between)
+		vertical(middle)
 	&.is-scrolled
-		background-color white-color
-		position fixed
-		top 0
-		left 0
-		width 100%
 		padding 10px 0 10px
 		border-bottom solid 1px smoke-color
 		
-
 .nav
 	&-list
 		list-style none
@@ -24,8 +24,10 @@
 		margin 0
 		li
 			display inline-block
-			margin 0 10px 0 0
 			vertical-align middle
+			// for hide in home
+			&.is-hiden
+				display none
 			&:last-child
 				margin-right 0
 			p, a
@@ -40,52 +42,74 @@
 			&>a
 				position relative
 				padding-right 30px
-				&::before,
-				&::after
-					position absolute
-					content ''
-					display block
-					width 8px
-					height 2px
-					background-color dark-color
-				&::before
-					transform rotate(45deg)
-					top 50%
-					right 10px
-				&::after
-					top 50%
-					right 6px
-					transform rotate(-45deg)
-					
-
-			&:hover
-				.submenu
-					height auto
-					top 100%
-					opacity 1
 	&-item
+		margin 0 10px 0 0
 		text-decoration none
 		display block
 		line-height 40px
 		color dark-color
 		padding 0 5px
+		&.buap,
+		&.fcfm
+			display none
+			
 		&:hover
 			background-color rgba(dark-color, .05)
 	.submenu
 			background-color white-color
-			position absolute
-			width 200px
-			height 0
-			overflow hidden
-			top 100%
-			opacity 0
-			transition all .5s cubic-bezier(0.22, 0.61, 0.36, 1)
-			box-shadow 0px 0px 8px -5px rgba(0,0,0,0.12), 0px 8px 12px -5px rgba(0,0,0,0.24)
 			li
 				display block
 				margin 0
 				a
 					padding 0 20px
+					font-family font-light
+					line-height 48px
+
+.toggleMenu
+	position relative
+	width 48px
+	height 48px 
+	display block
+	span 
+		display none
+	&::after,
+	&::before
+		content ''
+		display block
+		width 20px
+		height 2px
+		background-color dark-color
+		position absolute
+		left 50%
+		transform translateX(-50%)
+		transition all .2s cubic-bezier(0.22, 0.61, 0.36, 1)
+	&:before
+		top 15px
+	&:after
+		top 30px
+	&.is-clicked
+		&::before
+			transform rotate(45deg)
+			margin-left -10px
+			top 50%
+		&::after
+			transform rotate(-45deg)
+			margin-left -10px
+			top 50%
+
+
+.menu
+	margin-top 0
+	height 0
+	overflow hidden
+	width 100%
+	transition all .2s cubic-bezier(0.22, 0.61, 0.36, 1)
+	li
+		display block
+		margin-bottom 30px
+	&.is-open
+		height auto
+		margin-top 40px
 
 #upWork
 	background-color purple-color
@@ -93,10 +117,12 @@
 	font-family font-light
 	font-size 16px
 	padding 0 15px
-	border-radius 20px
+	border-radius 40px
 	font-weight 600
 	position relative
 	overflow hidden
+	text-align center
+	line-height 56px
 	span
 		z-index 100
 		position relative
@@ -105,7 +131,7 @@
 		position absolute
 		content ''
 		display block
-		transition all .5s cubic-bezier(0.22, 0.61, 0.36, 1)
+		transition all .3s cubic-bezier(0.22, 0.61, 0.36, 1)
 	&::before
 		width 40px
 		height 40px
@@ -123,12 +149,91 @@
 		z-index 1
 		border-radius 100px
 	
-	&:hover
-		background-color purple-color
-		color white-color
-		&::before
-			top -10px
-			left -10px
-		&::after
-			top 10px
-			right -10px
+
+
+@media screen and (min-width screen_large)
+	.header 
+		position relative
+		transition none
+		&.is-scrolled
+			position fixed
+			top 0
+			left 0
+			width 100%
+
+	.nav
+		&-list
+			li
+				margin-right 10px
+			.dropdown
+				position relative
+				&>a
+					&::before,
+					&::after
+						position absolute
+						content ''
+						display block
+						width 8px
+						height 2px
+						background-color dark-color
+					&::before
+						transform rotate(45deg)
+						top 50%
+						right 10px
+					&::after
+						top 50%
+						right 6px
+						transform rotate(-45deg)
+
+				&:hover
+					.submenu
+						height auto
+						top 100%
+						opacity 1
+		&-item
+			text-decoration none
+			display block
+			line-height 40px
+			color dark-color
+			padding 0 5px
+			&.buap,
+			&.fcfm
+				display block
+			&:hover
+				background-color rgba(dark-color, .05)
+		.submenu
+				background-color white-color
+				position absolute
+				width 200px
+				height 0
+				overflow hidden
+				top 80%
+				opacity 0
+				transition all .5s cubic-bezier(0.22, 0.61, 0.36, 1)
+				box-shadow 0px 0px 8px -5px rgba(0,0,0,0.12), 0px 8px 12px -5px rgba(0,0,0,0.24)
+				li
+					a
+						line-height 40px
+
+
+	.toggleMenu
+		display none
+	.menu
+		width auto
+		height auto
+		overflow visible
+		li
+			display inline-block
+			margin-bottom 0
+
+	#upWork
+		line-height 40px
+		&:hover
+			background-color purple-color
+			color white-color
+			&::before
+				top -10px
+				left -10px
+			&::after
+				top 10px
+				right -10px
