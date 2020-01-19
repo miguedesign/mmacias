@@ -4,7 +4,7 @@
       <ul class="nav-list">
         <li><a href="" class="nav-item buap">BUAP</a></li>
         <li><a href="" class="nav-item fcfm">FCFM</a></li>
-        <li><p id="date">12 de Diciembre del 2019</p></li>
+        <li><p id="fecha">12 de Diciembre del 2019</p></li>
       </ul>
     </nav>
     <a href="#" class="toggleMenu"><span>button menu</span></a>
