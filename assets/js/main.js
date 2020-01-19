@@ -11,32 +11,31 @@ jQuery(document).ready(function($) {
 	
 	// Header fixed
 	previousScroll = 0;
-	$topBar = $('.header');
+	header = $('.header');
 	$main = $('.main');
-	originalTop = $topBar.offset().top;
+	originalTop = header.offset().top;
 	$(window).scroll(
 		function(e){
 		if ($(this).scrollTop() >= originalTop + 40)
 			{
-				$topBar.addClass('is-scrolled');
+				header.addClass('is-scrolled');
 				$main.addClass('is-scrolled');
 			}
 		else
 			{
-				$topBar.removeClass('is-scrolled');
+				header.removeClass('is-scrolled');
 				$main.removeClass('is-scrolled');
 
 		}
 	});
 
-	
+
 	// Navigation left
 	var contentSections = $('.cd-section'),
-        navigationItems = $('#cd-vertical-nav a');
-
+      navigationItems = $('#cd-vertical-nav a');
     updateNavigation();
     $(window).on('scroll', function(){
-        updateNavigation();
+    	updateNavigation();
     });
 
     //smooth scroll to the section
@@ -74,7 +73,7 @@ jQuery(document).ready(function($) {
 
     function smoothScroll(target) {
         $('body,html').animate(
-            {'scrollTop':target.offset().top},
+            {'scrollTop':target.offset().top - 100},
             600
         );
     }

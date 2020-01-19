@@ -14,11 +14,11 @@
         <li class="dropdown">
             <a href="" class="nav-item">Materias</a>
             <ul class="nav-list submenu">
-              <li><a href="" class="nav-item current">Computación</a></li>
-              <li><a href="" class="nav-item">Programación I</a></li>
-              <li><a href="" class="nav-item">Programación II</a></li>
-              <li><a href="" class="nav-item">DHTIC</a></li>
-              <li><a href="" class="nav-item">Etc</a></li>
+              <li><a href="computacion.php" class="nav-item current">Computación</a></li>
+              <li><a href="programacion.php" class="nav-item">Programación I</a></li>
+              <li><a href="programacion2.php" class="nav-item">Programación II</a></li>
+              <li><a href="dhtic.php" class="nav-item">DHTIC</a></li>
+              <li><a href="detail-course.html" class="nav-item">Etc</a></li>
             </ul>
         </li>
         <li>

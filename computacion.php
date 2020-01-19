@@ -259,7 +259,7 @@
 			</section>
 
 			<!-- Actividades, Tareas -->
-			<section class="cd-section courseContent purple" id="tareas">
+			<section class="cd-section courseContent yellow" id="tareas">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>Tareas</h2>
@@ -355,33 +355,33 @@
 <nav id="cd-vertical-nav">
 	<ul>
 		<li>
-			<a href="#recursos" data-number="1">
+			<a href="#recursos" data-number="1" class="purple">
 				<span class="cd-dot"></span>
-				<span class="cd-label">recursos</span>
+				<span class="cd-label">Recursos</span>
 			</a>
 		</li>
 		<li>
-			<a href="#software" data-number="2">
+			<a href="#software" data-number="2" class="blue">
 				<span class="cd-dot"></span>
 				<span class="cd-label">Software</span>
 			</a>
 		</li>
 		<li>
-			<a href="#latex" data-number="3">
+			<a href="#latex" data-number="3" class="pink">
 				<span class="cd-dot"></span>
-				<span class="cd-label">latex</span>
+				<span class="cd-label">Latex</span>
 			</a>
 		</li>
 		<li>
-			<a href="#geogebra" data-number="4">
+			<a href="#geogebra" data-number="4" class="navy">
 				<span class="cd-dot"></span>
-				<span class="cd-label">geogebra</span>
+				<span class="cd-label">Geogebra</span>
 			</a>
 		</li>
 		<li>
-			<a href="#tareas" data-number="5">
+			<a href="#tareas" data-number="5" class="yellow">
 				<span class="cd-dot"></span>
-				<span class="cd-label">tareas</span>
+				<span class="cd-label">Tareas</span>
 			</a>
 		</li>
 	</ul>
