@@ -20,7 +20,7 @@
       </header>
 
 			<!-- INFORMACIÓN Y RECURSOS -->
-			<section class="courseContent purple">
+			<section class="cd-section courseContent purple" id="recursos">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>Recursos</h2>
@@ -67,7 +67,7 @@
 			</section>
 			
 			<!-- SOFTWARE LIBRE -->
-			<section class="courseContent blue">
+			<section class="cd-section courseContent blue" id="software">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>Software</h2>
@@ -122,7 +122,7 @@
 			</section>
 
 			<!-- LaTeX -->
-			<section class="courseContent pink">
+			<section class="cd-section courseContent pink" id="latex">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>Latex</h2>
@@ -240,7 +240,7 @@
 			</section>
 
 			<!-- GeoGebra -->
-			<section class="courseContent navy">
+			<section class="cd-section courseContent navy" id="geogebra">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>GeoGbra</h2>
@@ -259,7 +259,7 @@
 			</section>
 
 			<!-- Actividades, Tareas -->
-			<section class="courseContent purple">
+			<section class="cd-section courseContent purple" id="tareas">
 				<div class="courseContent-container">
 					<article class="courseContent-title">
 						<h2>Tareas</h2>
@@ -350,7 +350,43 @@
 				</div>
 			</section>
 		</div>
-	</main>
+</main>
+
+<nav id="cd-vertical-nav">
+	<ul>
+		<li>
+			<a href="#recursos" data-number="1">
+				<span class="cd-dot"></span>
+				<span class="cd-label">recursos</span>
+			</a>
+		</li>
+		<li>
+			<a href="#software" data-number="2">
+				<span class="cd-dot"></span>
+				<span class="cd-label">Software</span>
+			</a>
+		</li>
+		<li>
+			<a href="#latex" data-number="3">
+				<span class="cd-dot"></span>
+				<span class="cd-label">latex</span>
+			</a>
+		</li>
+		<li>
+			<a href="#geogebra" data-number="4">
+				<span class="cd-dot"></span>
+				<span class="cd-label">geogebra</span>
+			</a>
+		</li>
+		<li>
+			<a href="#tareas" data-number="5">
+				<span class="cd-dot"></span>
+				<span class="cd-label">tareas</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
   
 
 <?php include('views/_footer.php'); ?>
