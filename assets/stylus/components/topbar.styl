@@ -1,12 +1,21 @@
 .header 
 	font-family font-bold
 	font-weight 100
-	padding-top 50px
+	padding 50px 0 10px
 	position relative
 	z-index 1000
 	.container
 		row()
 		justify(between)
+	&.is-scrolled
+		background-color white-color
+		position fixed
+		top 0
+		left 0
+		width 100%
+		padding 10px 0 10px
+		border-bottom solid 1px smoke-color
+		
 
 .nav
 	&-list
