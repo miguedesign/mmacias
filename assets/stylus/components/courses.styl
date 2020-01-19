@@ -1,5 +1,5 @@
 .courseHeader
-  height 200px
+  min-height 140px
   text-align center
   margin-top 40px
   background-size cover
@@ -9,9 +9,9 @@
     vertical-align middle
     font-family font-bold
     color white-color
-    font-size 60px
-    line-height 60px
-    margin-top 70px
+    font-size 32px
+    line-height 40px
+    margin-top 50px
     display inline-block
     font-weight 100
 
@@ -20,16 +20,14 @@
   &-container
     row()
   &-title
-    col(5)
-    offset(1)
+    col(12)
     h2
       font-family font-light
-      font-size 50px
-      line-height 50px
+      font-size 32px
+      line-height 40px
       margin 0
   &-lists
-    col(5)
-    margin-left 1.5%
+    col(12)
     
 .courseList
   padding 0
@@ -37,7 +35,7 @@
   margin-top 20px
   list-style none
   &-item
-    margin-bottom 24px
+    margin-bottom 36px
     h3
       margin 0
   &-note
@@ -52,6 +50,7 @@
     display block
     color dark-color
     position relative
+    padding-right 60px
     p
       margin-top 4px
     &::after
@@ -171,4 +170,27 @@ _____________________________________________________ */
           border-bottom-color yellow-color
           &::after
             background-color yellow-color
-    
+
+
+
+
+@media screen and (min-width screen_large)
+  .courseHeader
+    height 200px
+    &-title
+      font-size 60px
+      line-height 60px
+      margin-top 70px
+  .courseContent
+    margin 60px 0
+    &-container
+      row()
+    &-title
+      col(5)
+      offset(1)
+      h2
+        font-size 50px
+        line-height 50px
+    &-lists
+      col(5)
+      margin-left 1.5%    

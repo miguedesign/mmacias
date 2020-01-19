@@ -7,118 +7,110 @@ Modules - reusable parts of our design
     text-indent 100%
     white-space nowrap
   
-// .cd-scroll-down
-//     position absolute
-//     left 50%
-//     right auto
-//     transform translateX(-50%)
-//     bottom 20px
-//     width 38px
-//     height 44px
-//     background url("../img/static/cd-arrow-bottom.svg") no-repeat center center
-    
-
 
 
 /* Touch devices */
-// .cd-nav-trigger
-//     display block
-//     z-index 20000
-//     position fixed
-//     bottom 30px
-//     right 5%
-//     height 44px
-//     width 44px
-//     border-radius 0.25em
-//     background rgba(primary-color, 0.8)
-//     span
-//       position absolute
-//       height 4px
-//       width 4px
-//       background-color #3e3947
-//       border-radius 50%
-//       left 50%
-//       top 50%
-//       bottom auto
-//       right auto
-//       transform translateX(-50%) translateY(-50%)
-//       &::before,
-//       &::after
-//         content ''
-//         height 100%
-//         width 100%
-//         position absolute
-//         left 0
-//         background-color inherit
-//         border-radius inherit
-//       &::before
-//         top -9px
-//       &::after
-//         bottom -9px
-// #cd-vertical-nav
-//   position fixed
-//   z-index 1
-//   right 5%
-//   bottom 30px
-//   width 90%
-//   max-width 400px
-//   max-height 90%
-//   // overflow-y scroll
-//   // -webkit-overflow-scrolling touch
-//   // transform-origin right bottom
-//   // transform scale(0)
-//   // transition-property transform
-//   // transition-duration 0.2s
-//   border-radius 0.25em
-//   background rgba(dark-color, 0.9)
+.cd-nav-trigger
+    display none
+    // z-index 20000
+    // position fixed
+    // bottom 30px
+    // right 5%
+    // height 44px
+    // width 44px
+    // border-radius 0.25em
+    // background rgba(primary-color, 0.8)
+    // span
+    //   position absolute
+    //   height 4px
+    //   width 4px
+    //   background-color #3e3947
+    //   border-radius 50%
+    //   left 50%
+    //   top 50%
+    //   bottom auto
+    //   right auto
+    //   transform translateX(-50%) translateY(-50%)
+    //   &::before,
+    //   &::after
+    //     content ''
+    //     height 100%
+    //     width 100%
+    //     position absolute
+    //     left 0
+    //     background-color inherit
+    //     border-radius inherit
+    //   &::before
+    //     top -9px
+    //   &::after
+    //     bottom -9px
+#cd-vertical-nav
+  display none
+  // position fixed
+  // z-index 1
+  // right 5%
+  // bottom 30px
+  // width 90%
+  // max-width 400px
+  // max-height 90%
+  // overflow-y scroll
+  // -webkit-overflow-scrolling touch
+  // transform-origin right bottom
+  // transform scale(0)
+  // transition-property transform
+  // transition-duration 0.2s
+  // border-radius 0.25em
+  // background rgba(dark-color, 0.9)
   
-//   a
-//     display block
-//     max-width 90%
-//     color white-color
-//     padding 1em
-//     border-bottom 1px solid rgba(white-color, 0.2)
-//     // span
-//     //     &:first-child
-//     //         display none
-//     // &.is-selected
-//     //     span
-//     //         &:last-child
-//     //             color dark-color
-//   &.open
-//     transform scale(1)
-//     & + .cd-nav-trigger
-//       background rgba(primary-color, 0)
-//       span
-//         background-color rgba(62, 57, 71, 0)
-//         &::before,
-//         &::after
-//           background-color primary-color
-//           height 3px
-//           width 20px
-//           border-radius 0
-//           left -8px
-//         &::before
-//           transform rotate(45deg)
-//           top 1px
-//         &::after
-//           transform rotate(135deg)
-//           bottom 0
-//     li
-//       &:last-child
-//         a
-//           border-bottom none
+  // a
+  //   display block
+  //   max-width 90%
+  //   color white-color
+  //   padding 1em
+  //   border-bottom 1px solid rgba(white-color, 0.2)
+  //   // span
+  //   //     &:first-child
+  //   //         display none
+  //   // &.is-selected
+  //   //     span
+  //   //         &:last-child
+  //   //             color dark-color
+  // &.open
+  //   transform scale(1)
+  //   & + .cd-nav-trigger
+  //     background rgba(primary-color, 0)
+  //     span
+  //       background-color rgba(62, 57, 71, 0)
+  //       &::before,
+  //       &::after
+  //         background-color primary-color
+  //         height 3px
+  //         width 20px
+  //         border-radius 0
+  //         left -8px
+  //       &::before
+  //         transform rotate(45deg)
+  //         top 1px
+  //       &::after
+  //         transform rotate(135deg)
+  //         bottom 0
+  //   li
+  //     &:last-child
+  //       a
+  //         border-bottom none
 
 
 
-// @media only screen and (min-width: 1024px)
+@media screen and (min-width screen_large)
   /* No Touch devices */
   .cd-nav-trigger
     display none
 
   .cd-nav-trigger,
   #cd-vertical-nav
+    display block
     bottom 40px
+    background-color transparent
   
   #cd-vertical-nav
     position fixed
