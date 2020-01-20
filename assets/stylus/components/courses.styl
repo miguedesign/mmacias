@@ -1,33 +1,58 @@
-.courseHeader
-  min-height 140px
-  text-align center
-  margin-top 40px
-  background-size cover
-  background-repeat no-repeat
-  background-position 0 0
-  &-title
-    vertical-align middle
-    font-family font-bold
-    color white-color
-    font-size 32px
-    line-height 40px
-    margin-top 50px
-    display inline-block
-    font-weight 100
-
-.courseContent
-  margin 60px 0
-  &-container
-    row()
-  &-title
-    col(12)
-    h2
-      font-family font-light
+.course
+  &Header
+    min-height 140px
+    text-align center
+    margin-top 40px
+    background-size cover
+    background-repeat no-repeat
+    background-position 0 0
+    &-title
+      vertical-align middle
+      font-family font-bold
+      color white-color
       font-size 32px
       line-height 40px
-      margin 0
-  &-lists
-    col(12)
+      margin-top 50px
+      display inline-block
+      font-weight 100
+  &News
+    margin-top 60px
+    &Content
+      padding 40px
+      background-color light-color
+      min-height 300px
+
+    &-date
+      p
+        margin 0
+        text-transform uppercase
+        font-size 12px
+        color rgba(dark-color, .6)
+    &-title
+      h3
+        font-size 20px
+        font-family font-light
+        font-weight 600
+        line-height 32px
+        margin-top 0
+    &-message
+      p
+        font-size 16px
+        line-height 28px
+        font-family font-light
+  &Content
+    margin 60px 0
+    &-container
+      row()
+    &-title
+      col(12)
+      h2
+        font-family font-light
+        font-size 32px
+        line-height 40px
+        margin 0
+    &-lists
+      col(12)
     
 .courseList
   padding 0
@@ -171,26 +196,32 @@ _____________________________________________________ */
           &::after
             background-color yellow-color
 
-
-
-
 @media screen and (min-width screen_large)
-  .courseHeader
-    height 200px
-    &-title
-      font-size 60px
-      line-height 60px
-      margin-top 70px
-  .courseContent
-    margin 60px 0
-    &-container
+  .course
+    &Container
       row()
-    &-title
+    &Header
+      col(12)
+      height 200px
+      &-title
+        font-size 60px
+        line-height 60px
+        margin-top 70px
+    &News
+      display inline-block
+      col(5)
+      &Content
+        transition all .2s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &.is-scrolled
+          width 447.33px
+          position fixed
+          top 61px
+
+    &Main
       col(5)
       offset(1)
+  .courseContent
+    &-title
       h2
         font-size 50px
         line-height 50px
-    &-lists
-      col(5)
-      margin-left 1.5%    

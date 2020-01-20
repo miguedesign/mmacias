@@ -30,22 +30,34 @@ jQuery(document).ready(function($) {
 	// Header fixed
 	previousScroll = 0;
 	header = $('.header');
-	$main = $('.main');
-    originalTop = header.offset().top;
+    main = $('.main');
+		originalTop = header.offset().top;
+		courseNews = $('.courseNewsContent');
+		stickyNavTop = courseNews.offset().top;
     $(window).scroll(
-		function(e){
-		if ($(this).scrollTop() >= originalTop + 40)
-			{
-				header.addClass('is-scrolled');
-				$main.addClass('is-scrolled');
-			}
-		else
-			{
-				header.removeClass('is-scrolled');
-				$main.removeClass('is-scrolled');
+			function(e){
+				if ($(this).scrollTop() >= originalTop + 40)
+				{
+					header.addClass('is-scrolled');
+					main.addClass('is-scrolled');
+					if ($(this).scrollTop() >= stickyNavTop - 60)
+					{
+						console.log('algo');
+						courseNews.addClass('is-scrolled');
+					}
+					else{
+						courseNews.removeClass('is-scrolled');
+					}
+				}
+				else
+				{
+					header.removeClass('is-scrolled');
+					main.removeClass('is-scrolled');
+				}
+		});
 
-		}
-    });
+  
+
 
 
     // Menu mobile
@@ -114,6 +126,30 @@ jQuery(document).ready(function($) {
     }
 
 
+
+    // Carousel
+    if ($("#owl-Items").length) {
+			$("#owl-Items").owlCarousel({
+				loop: true,
+				margin: 0,
+				dots: true,
+				nav: true,
+				autoplay: true,
+				autoplayTimeout: 4000,
+				slideTransition: "linear",
+				responsive: {
+				0: {
+						items: 1
+				},
+				600: {
+						items: 1
+				},
+				1000: {
+						items: 1
+				}
+				}
+			});
+		}
 
 
 
