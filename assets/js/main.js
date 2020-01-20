@@ -30,30 +30,39 @@ jQuery(document).ready(function($) {
 	// Header fixed
 	previousScroll = 0;
 	header = $('.header');
-    main = $('.main');
-		originalTop = header.offset().top;
-		courseNews = $('.courseNewsContent');
-		stickyNavTop = courseNews.offset().top;
-    $(window).scroll(
-			function(e){
-				if ($(this).scrollTop() >= originalTop + 40)
+	main = $('.main');
+	originalTop = header.offset().top;
+	courseNews = $('.courseNewsContent');
+	stickyNews = courseNews.offset().top;
+	navigation = $('#cd-vertical-nav');
+	stickyNavTop = navigation.offset().top;
+
+	$(window).scroll(
+		function(e){
+			if ($(this).scrollTop() >= originalTop + 40)
+			{
+				header.addClass('is-scrolled');
+				main.addClass('is-scrolled');
+				if ($(this).scrollTop() >= stickyNews - 60)
 				{
-					header.addClass('is-scrolled');
-					main.addClass('is-scrolled');
-					if ($(this).scrollTop() >= stickyNavTop - 60)
-					{
-						console.log('algo');
-						courseNews.addClass('is-scrolled');
-					}
-					else{
-						courseNews.removeClass('is-scrolled');
-					}
+					courseNews.addClass('is-scrolled');
 				}
-				else
+				else{
+					courseNews.removeClass('is-scrolled');
+				}
+				if ($(this).scrollTop() >= stickyNavTop - 60)
 				{
-					header.removeClass('is-scrolled');
-					main.removeClass('is-scrolled');
+					navigation.addClass('is-scrolled');
 				}
+				else{
+					navigation.removeClass('is-scrolled');
+				}
+			}
+			else
+			{
+				header.removeClass('is-scrolled');
+				main.removeClass('is-scrolled');
+			}
 		});
 
   
@@ -120,7 +129,7 @@ jQuery(document).ready(function($) {
 
     function smoothScroll(target) {
         $('body,html').animate(
-            {'scrollTop':target.offset().top - 100},
+            {'scrollTop':target.offset().top - 140},
             600
         );
     }

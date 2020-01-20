@@ -19,7 +19,7 @@ Modules - reusable parts of our design
     // height 44px
     // width 44px
     // border-radius 0.25em
-    // background rgba(primary-color, 0.8)
+    // background rgba(dark-color, 0.8)
     // span
     //   position absolute
     //   height 4px
@@ -45,36 +45,75 @@ Modules - reusable parts of our design
     //   &::after
     //     bottom -9px
 #cd-vertical-nav
-  display none
-  // position fixed
-  // z-index 1
-  // right 5%
-  // bottom 30px
-  // width 90%
-  // max-width 400px
-  // max-height 90%
-  // overflow-y scroll
-  // -webkit-overflow-scrolling touch
-  // transform-origin right bottom
-  // transform scale(0)
-  // transition-property transform
-  // transition-duration 0.2s
-  // border-radius 0.25em
-  // background rgba(dark-color, 0.9)
+  display block
+  width 100%
+  background-color white-color
+  margin-top 40px
+  &.is-scrolled
+    position fixed
+    top 68px
+    left 0
+    z-index 1000
+    margin-top 0
+    border-bottom solid 1px smoke-color
+    padding-left 20px
+  ul
+    padding 0
+    margin 0
+    text-align left
+  li
+    display inline-block
+    margin-right 10px
+  a
+    display block
+    max-width 90%
+    color dark-color
+    padding 10px 0
+    font-size 12px
+    border-bottom 1px solid rgba(white-color, 0.2)
+    /*----------------------------
+      Colors
+      ----------------------------*/
+    &.purple
+      .cd-dot
+        background-color purple-color
+      .cd-label
+        color purple-color
+    &.pink
+      .cd-dot
+        background-color pink-color
+      .cd-label
+        color pink-color
+    &.blue
+      .cd-dot
+        background-color blue-color
+      .cd-label
+        color blue-color
+    &.navy
+      .cd-dot
+        background-color blueDark-color
+      .cd-label
+        color blueDark-color
+    &.yellow
+      .cd-dot
+        background-color yellow-color
+      .cd-label
+        color yellow-color
+
+
+    &.is-selected
+      border-top solid 4px
+      &.purple
+        border-top-color purple-color
+      &.pink
+        border-top-color pink-color
+      &.blue
+        border-top-color blue-color
+      &.navy
+        border-top-color blueDark-color
+      &.yellow
+        border-top-color yellow-color
   
-  // a
-  //   display block
-  //   max-width 90%
-  //   color white-color
-  //   padding 1em
-  //   border-bottom 1px solid rgba(white-color, 0.2)
-  //   // span
-  //   //     &:first-child
-  //   //         display none
-  //   // &.is-selected
-  //   //     span
-  //   //         &:last-child
-  //   //             color dark-color
   // &.open
   //   transform scale(1)
   //   & + .cd-nav-trigger
@@ -114,22 +153,29 @@ Modules - reusable parts of our design
   
   #cd-vertical-nav
     position fixed
-    left 30px
+    right 30px
     top 50%
     bottom auto
     transform translateY(-50%)
     z-index 2000
     max-width 200px
     transition all .2s cubic-bezier(.8,0,.2,1)
+    margin-top 0
+    &.is-scrolled
+      position fixed
+      right 30px
+      left auto
+      top 50%
+      margin-top 0
+      border-bottom none
     &:hover
       .cd-label
         opacity 1
     ul
-      padding 0
-      margin 0
-      text-align left
+      text-align right
     li
-      text-align left
+      text-align right
+      display block
     a
       display block
       padding 5px
@@ -148,40 +194,14 @@ Modules - reusable parts of our design
         color dark-color
         font-size 14px
         opacity 0
-      /*----------------------------
-      Colors
-      ----------------------------*/
-      &.purple
-        .cd-dot
-          background-color purple-color
-        .cd-label
-          color purple-color
-      &.pink
-        .cd-dot
-          background-color pink-color
-        .cd-label
-          color pink-color
-      &.blue
-        .cd-dot
-          background-color blue-color
-        .cd-label
-          color blue-color
-      &.navy
-        .cd-dot
-          background-color blueDark-color
-        .cd-label
-          color blueDark-color
-      &.yellow
-        .cd-dot
-          background-color yellow-color
-        .cd-label
-          color yellow-color
+      
       &:hover
         span
           transform scale(1)
         .cd-dot 
           width 20px
       &.is-selected
+        border none
         .cd-dot 
           width 20px
         .cd-label
