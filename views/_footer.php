@@ -20,6 +20,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script type='text/javascript' src="./assets/js/owl.carousel.min.js" async></script>
 <script type='text/javascript' src="./assets/js/main.js" async></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
